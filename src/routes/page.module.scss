@@ -1,5 +1,9 @@
 .container {
   padding: 24px 60px;
+
+  :global(.semi-input-textarea-readonly) {
+    color: var(--semi-color-text-0);
+  }
 }
 
 .title {

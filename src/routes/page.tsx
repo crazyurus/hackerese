@@ -1,11 +1,35 @@
 import { useState } from 'react';
-import { Button, TextArea } from '@douyinfe/semi-ui';
+import { Button, TextArea, Toast } from '@douyinfe/semi-ui';
+
+import { post as translate } from '@api/translate';
+import { useLoading } from '../hooks';
 
 import styles from './page.module.scss';
 
 function IndexPage(): JSX.Element {
   const [text, setText] = useState('');
   const [result, setResult] = useState('');
+
+  const [handleTranslate, loading] = useLoading(async () => {
+    const { result } = await translate({
+      data: {
+        text,
+      },
+    });
+
+    setResult(result);
+  });
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(result);
+
+    Toast.success('Copied');
+  };
+
+  const handleReset = () => {
+    setText('');
+    setResult('');
+  };
 
   return (
     <div className={styles.container}>
@@ -25,9 +49,18 @@ function IndexPage(): JSX.Element {
         onChange={setResult}
       />
       <div className={styles.footer}>
-        <Button theme="solid">Translate</Button>
-        <Button>Copy</Button>
-        <Button>Reset</Button>
+        <Button
+          loading={loading}
+          disabled={!text}
+          theme="solid"
+          onClick={handleTranslate}
+        >
+          Translate
+        </Button>
+        <Button disabled={!result} onClick={handleCopy}>
+          Copy
+        </Button>
+        <Button onClick={handleReset}>Reset</Button>
       </div>
     </div>
   );
