@@ -10,6 +10,9 @@ export default defineConfig({
   bff: {
     enableHandleWeb: true,
   },
+  server: {
+    port: 8888,
+  },
   runtime: {
     router: true,
   },
