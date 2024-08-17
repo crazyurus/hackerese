@@ -1,5 +1,9 @@
 # Hackerese Translator
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/59c492af-2a79-491c-8ffa-77898ad89464/deploy-status)](https://app.netlify.com/sites/hackerese/deploys)
+
+https://hackerese.crazyurus.com/
+
 ## Setup
 
 Install the dependencies:
@@ -35,3 +39,7 @@ pnpm serve
 ```
 
 For more information, see the [Modern.js documentation](https://modernjs.dev/en).
+
+## License
+
+[MIT](./LICENSE)
