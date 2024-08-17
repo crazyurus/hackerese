@@ -19,6 +19,9 @@ export default defineConfig({
     polyfillPlugin(),
     tailwindcssPlugin(),
   ],
+  html: {
+    title: 'Hackerese',
+  },
   tools: {
     rspack(config, context) {
       context.appendPlugins([
