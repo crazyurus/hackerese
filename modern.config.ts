@@ -3,6 +3,7 @@ import { bffPlugin } from '@modern-js/plugin-bff';
 import { koaPlugin } from '@modern-js/plugin-koa';
 import { polyfillPlugin } from '@modern-js/plugin-polyfill';
 import { tailwindcssPlugin } from '@modern-js/plugin-tailwindcss';
+import { SemiRspackPlugin } from '@douyinfe/semi-rspack-plugin';
 
 // https://modernjs.dev/en/configure/app/usage
 export default defineConfig({
@@ -18,4 +19,13 @@ export default defineConfig({
     polyfillPlugin(),
     tailwindcssPlugin(),
   ],
+  tools: {
+    rspack(config, context) {
+      context.appendPlugins([
+        new SemiRspackPlugin({
+          cssLayer: true,
+        }),
+      ]);
+    },
+  },
 });

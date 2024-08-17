@@ -25,6 +25,7 @@
     "dist/"
   ],
   "dependencies": {
+    "@douyinfe/semi-ui": "^2.64.0",
     "@modern-js/plugin-bff": "^2.58.1",
     "@modern-js/plugin-koa": "^2.58.1",
     "@modern-js/plugin-polyfill": "2.58.1",
@@ -36,12 +37,13 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@douyinfe/semi-rspack-plugin": "^2.64.0",
+    "@modern-js-app/eslint-config": "^2.58.1",
     "@modern-js/app-tools": "^2.58.1",
     "@modern-js/eslint-config": "^2.58.1",
     "@modern-js/tsconfig": "^2.58.1",
-    "@modern-js-app/eslint-config": "^2.58.1",
-    "@types/koa": "^2.15.0",
     "@types/jest": "^29.5.12",
+    "@types/koa": "^2.15.0",
     "@types/node": "^22.4.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
