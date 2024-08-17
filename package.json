@@ -27,7 +27,10 @@
   "dependencies": {
     "@modern-js/runtime": "2.58.1",
     "react": "~18.2.0",
-    "react-dom": "~18.2.0"
+    "react-dom": "~18.2.0",
+    "@modern-js/plugin-bff": "2.58.1",
+    "@modern-js/plugin-koa": "2.58.1",
+    "koa": "~2.15.3"
   },
   "devDependencies": {
     "@modern-js/app-tools": "2.58.1",
@@ -42,6 +45,9 @@
     "lint-staged": "~13.1.0",
     "prettier": "~2.8.1",
     "husky": "~8.0.1",
-    "rimraf": "~3.0.2"
+    "rimraf": "~3.0.2",
+    "ts-node": "~10.8.1",
+    "tsconfig-paths": "~3.14.1",
+    "@types/koa": "~2.15.0"
   }
 }
