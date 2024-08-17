@@ -7,6 +7,9 @@ import { SemiRspackPlugin } from '@douyinfe/semi-rspack-plugin';
 
 // https://modernjs.dev/en/configure/app/usage
 export default defineConfig({
+  bff: {
+    enableHandleWeb: true,
+  },
   runtime: {
     router: true,
   },
